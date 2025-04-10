@@ -56,7 +56,7 @@
  * Provides feedback on total correct out of total asked. 
  * If perfect score, displays "Perfection Badge"
  * If not perfect, displays how many right out of questions
- * Then displays mistake factors in pairs to inform story. 
+ * Then calls showErrors sending number of errors as parameter. 
  * While user wants to study tables, calls showTable for a factor.
  * Prompt changes from "any tables" to "more tables" 
  * @param: score, questions
@@ -66,16 +66,16 @@
 
 /* Function showTable(factor)
  * Display the table for the factor passed as a parameter
- * Builds table line by line with a loop, then shows table * One line for each factor value. low to high 
+ * Builds table line by line with a loop, then shows table 
+ * One line for each factor value, low to high 
  * @param: factor
  * @return: none
  */
 
 
-/* Function showErrors()
- * Provides feedback on errors by showing pairs of factors.
- * statsAnalysis() shows most frequent factor in errors.  
+/* Function showErrors(errors)
+ * Provides feedback on errors by showing pairs of factors from the mistakes array (global).
+ * statsAnalysis() shows the highest most frequent factor in mistakes[]  
  * @param: errors
  * @return: none
  */
-
